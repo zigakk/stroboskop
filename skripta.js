@@ -9,10 +9,16 @@ window.addEventListener('load', function() {
         document.getElementById("barve").appendChild(input);
 	}
 	
-	document.querySelector("#novaBarva") 
-		.addEventListener('click', dodajBarvo);
+	document.querySelector("#novaBarva").addEventListener('click', dodajBarvo);
 		
 	//Odstrani barve
+	
+	var odstraniBarve = function(event)
+	{
+		document.getElementById("barve").innerHTML = "";
+	}
+	
+	document.querySelector("#odstraniBarve").addEventListener('click', odstraniBarve);
 	
 	//Stroboskop
 	var vrednosti = [];
